@@ -1,18 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <img src="./img/pliazh_more.jpg" alt="" class="image" />
+    <form class="form">
+      <h1 class="heading">Contact form</h1>
+      <p class="text-card">
+        Please fill in your information and we`ll be sending your order.
+      </p>
+
+      <div class="block">
+        <label for="name"> <span class="fields">Your name</span></label>
+        <div class="main-with">
+          <input
+            id="name"
+            type="text"
+            name="fn"
+            placeholder="First name"
+            class="name"
+          />
+          <input type="text" name="ln" placeholder="Last name" class="name" />
+        </div>
+      </div>
+
+      <div class="block">
+        <label for="email">
+          <span class="fields">Your e-mail</span>
+        </label>
+        <input
+          id="email"
+          type="email"
+          placeholder="e-mail"
+          name="e-mail"
+          class="main-with"
+        />
+      </div>
+
+      <div class="block">
+        <label for="phone"> <span class="fields">Phone *</span></label>
+        <div class="main-with">
+          <input
+            id="phone"
+            type="number"
+            title="Enter phone number"
+            name="phone"
+            placeholder="000"
+            class="num"
+            required
+          />
+          <input type="number" name="mobile1" placeholder="000" class="num" />
+          <input type="number" name="mobile2" placeholder="0000" class="num" />
+        </div>
+      </div>
+
+      <div class="block">
+        <label> <span class="fields">Message subject *</span></label>
+        <select
+          name="message"
+          title="Choose variant"
+          class="main-with"
+          required
+        >
+          <option value="">Other</option>
+          <option value="two">Managed</option>
+          <option value="three">Payed</option>
+          <option value="four">Complaint</option>
+        </select>
+      </div>
+
+      <div class="block line">
+        <label for="1"> <span class="fields">Message *</span></label>
+        <textarea
+          name="descr"
+          id="1"
+          cols="30"
+          rows="4"
+          class="main-with"
+          required
+        ></textarea>
+      </div>
+
+      <div class="submit">
+        <input type="submit" value="SUBMIT FORM" class="main-with btn">
+      </div>
+    </form>
+  </body>
 </html>
