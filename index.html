@@ -4,16 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <img src="./img/pliazh_more.jpg" alt="" class="image" />
     <form class="form">
       <h1 class="heading">Contact form</h1>
       <p class="text-card">
@@ -22,15 +17,15 @@
 
       <div class="block">
         <label for="name"> <span class="fields">Your name</span></label>
-        <div class="main-with">
+        <div class="input-container">
           <input
             id="name"
             type="text"
             name="fn"
             placeholder="First name"
-            class="name"
+            class="input-element"
           />
-          <input type="text" name="ln" placeholder="Last name" class="name" />
+          <input type="text" name="ln" placeholder="Last name" class="input-element" />
         </div>
       </div>
 
@@ -38,38 +33,41 @@
         <label for="email">
           <span class="fields">Your e-mail</span>
         </label>
-        <input
+        <div class="input-container">
+            <input
           id="email"
           type="email"
           placeholder="e-mail"
           name="e-mail"
-          class="main-with"
+          class="input-element"
         />
-      </div>
-
-      <div class="block">
-        <label for="phone"> <span class="fields">Phone *</span></label>
-        <div class="main-with">
-          <input
-            id="phone"
-            type="number"
-            title="Enter phone number"
-            name="phone"
-            placeholder="000"
-            class="num"
-            required
-          />
-          <input type="number" name="mobile1" placeholder="000" class="num" />
-          <input type="number" name="mobile2" placeholder="0000" class="num" />
         </div>
       </div>
 
       <div class="block">
-        <label> <span class="fields">Message subject *</span></label>
-        <select
+        <label for="phone"> <span class="fields">Phone *</span></label>
+        <div class="input-container">
+          <input
+            id="phone"
+            type="tel"
+            title="Enter phone number"
+            name="phone"
+            placeholder="000"
+            class="input-element"
+            required
+          />
+          <input type="tel" name="mobile1" placeholder="000" class="input-element" />
+          <input type="tel" name="mobile2" placeholder="0000" class="input-element last-number" />
+        </div>
+      </div>
+
+      <div class="block">
+        <label> <span class="fields wrap-world">Message subject *</span></label>
+        <div class="input-container">
+                   <select
           name="message"
           title="Choose variant"
-          class="main-with"
+          class="input-element"
           required
         >
           <option value="">Other</option>
@@ -77,22 +75,25 @@
           <option value="three">Payed</option>
           <option value="four">Complaint</option>
         </select>
+        </div>
       </div>
 
       <div class="block line">
         <label for="1"> <span class="fields">Message *</span></label>
-        <textarea
-          name="descr"
+        <div class="input-container">
+                   <textarea
+          name="description"
           id="1"
           cols="30"
           rows="4"
-          class="main-with"
+          class="input-element"
           required
         ></textarea>
+        </div>
       </div>
 
       <div class="submit">
-        <input type="submit" value="SUBMIT FORM" class="main-with btn">
+        <input type="submit" value="SUBMIT FORM" class="submit-btn">
       </div>
     </form>
   </body>
